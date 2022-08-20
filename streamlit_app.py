@@ -9,5 +9,5 @@ streamlit.text('Hard-Boiled Free-Range Egg')
 import pandas
 
 t1=pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
-streamlit.dataframe(t1)
 streamlit.multiselect("filter",list(t1.index))
+streamlit.dataframe(t1)
