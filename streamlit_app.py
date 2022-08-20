@@ -10,5 +10,5 @@ import pandas
 
 t1=pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 t1=t1.set_index('Fruit')
-streamlit.multiselect("filter",list(t1.index))
-streamlit.dataframe(t1)
+t2=t1.loc[streamlit.multiselect("filter",list(t1.index))]
+streamlit.dataframe(t2)
